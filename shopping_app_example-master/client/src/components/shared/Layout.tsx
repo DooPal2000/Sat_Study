@@ -20,6 +20,7 @@ const Layout = ({ children }: Props) => {
 
   const handlePushHomePage = () => navigate("/");
   const handlePushCartPage = () => navigate("/cart");
+  const handleLoginPage = () => navigate("/login");
   const handlePushCreatePage = () => navigate("/create");
 
   return (
@@ -34,9 +35,14 @@ const Layout = ({ children }: Props) => {
             >
               온라인 쇼핑몰
             </Typography>
+            <div>
             <Button color="inherit" onClick={handlePushCartPage}>
               장바구니
             </Button>
+            <Button color="inherit" onClick={handleLoginPage}>
+              로그인
+            </Button>
+            </div>
           </Toolbar>
         </AppBar>
 

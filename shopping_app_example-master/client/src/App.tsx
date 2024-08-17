@@ -8,6 +8,7 @@ import {
   ProductCreatePage,
   ProductPage,
   PurchasePage,
+  LoginPage,
 } from "./pages";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route index element={<HomePage />} />
         <Route path="create" element={<ProductCreatePage />} />
         <Route path="cart" element={<CartPage />} />
+        <Route path="login" element={<LoginPage />} />
         <Route path="product/:productId" element={<ProductPage />} />
         <Route path="purchase/:productId" element={<PurchasePage />} />
         <Route path="*" element={<NotFoundPage />} />
