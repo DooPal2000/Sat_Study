@@ -23,15 +23,15 @@ public class OwnerControlller {
 	}
 	@RequestMapping("/owner/name")
 	public Optional<Owner> getOwnerByFirstName(@RequestBody Map<String, String> requestBody) {
-		String firstName = requestBody.get("firstName");
-		String lastName = requestBody.get("lastName");
+		String firstname = requestBody.get("firstname");
+		String lastname = requestBody.get("lastname");
 
-		if (firstName != null && lastName != null) {
-			return repository.findByFirstNameAndLastName(firstName, lastName);
-		} else if (firstName != null) {
-			return repository.findByFirstname(firstName);
+		if (firstname != null && lastname != null) {
+			return repository.findByFirstnameAndLastname(firstname, lastname);
+		} else if (firstname != null) {
+			return repository.findByFirstname(firstname);
 		} else {
-			return repository.findByLastname(lastName);
+			return repository.findByLastname(lastname);
 		}
 	}
 }
