@@ -26,5 +26,4 @@ public class CarController {
 	public Iterable<Car> getCarsByColor(@RequestBody Map<String, String> requestBody) {
 		return repository.findByColor(requestBody.get("color"));
 	}
-
 }

@@ -2,19 +2,13 @@ package com.packt.cardatabase;
 
 import java.util.Arrays;
 
+import com.packt.cardatabase.domain.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import com.packt.cardatabase.domain.Car;
-import com.packt.cardatabase.domain.CarRepository;
-import com.packt.cardatabase.domain.Owner;
-import com.packt.cardatabase.domain.OwnerRepository;
-import com.packt.cardatabase.domain.User;
-import com.packt.cardatabase.domain.UserRepository;
 
 @SpringBootApplication
 public class CardatabaseApplication implements CommandLineRunner {	
@@ -29,6 +23,9 @@ public class CardatabaseApplication implements CommandLineRunner {
 
 	@Autowired
 	private UserRepository urepository;
+
+	@Autowired
+	private ProductRepository productRepository;
 
 	public static void main(String[] args) {
 		SpringApplication.run(CardatabaseApplication.class, args);
